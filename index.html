@@ -19,7 +19,7 @@
     .container {
       text-align: center;
       padding: 20px;
-      max-width: 90%;
+      max-width: 600px;
       width: 100%;
       box-sizing: border-box;
     }
@@ -28,8 +28,8 @@
       border: 2px solid #007bff;
       background-color: white;
       margin-bottom: 20px;
-      width: 300px;  /* Fixed width for the canvas */
-      height: 300px; /* Fixed height for the canvas */
+      width: 150px;
+      height: 150px;
     }
 
     h1 {
@@ -80,54 +80,13 @@
       font-weight: bold;
       color: #333;
     }
-
-    /* Responsive design */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      p {
-        font-size: 1.1rem;
-      }
-
-      button {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-      }
-
-      canvas {
-        width: 250px;
-        height: 250px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      button {
-        font-size: 0.85rem;
-        padding: 8px 14px;
-      }
-
-      canvas {
-        width: 200px;
-        height: 200px;
-      }
-    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Revolutionizing Dental Imaging</h1>
     <p>Stay tuned for cutting-edge CBCT technology and advanced dental imaging solutions.<br> Get ready for a new era in dental care with <span class="company-name">Romi Dento Scan</span>!</p>
-    <canvas id="patternCanvas"></canvas>
+    <canvas id="patternCanvas" width="150" height="150"></canvas>
     <br>
     <button onclick="generatePattern()">Generate New Pattern</button>
     <div class="contact">
@@ -152,21 +111,18 @@
     function generatePattern() {
       const canvas = document.getElementById('patternCanvas');
       const ctx = canvas.getContext('2d');
-      const width = canvas.width;
-      const height = canvas.height;
-
-      ctx.clearRect(0, 0, width, height); // Clear canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
 
       const shapes = ['circle', 'rectangle', 'triangle'];
 
-      for (let i = 0; i < 10; i++) { // Generate 10 random shapes
+      for (let i = 0; i < 5; i++) { // Generate fewer, smaller shapes
         const shape = shapes[getRandomInt(0, shapes.length - 1)];
         const color = getRandomColor();
         ctx.fillStyle = color;
 
-        const x = getRandomInt(0, width);
-        const y = getRandomInt(0, height);
-        const size = getRandomInt(20, 100); // Smaller size range to fit the canvas
+        const x = getRandomInt(0, canvas.width);
+        const y = getRandomInt(0, canvas.height);
+        const size = getRandomInt(10, 50); // Smaller size range for shapes
 
         if (shape === 'circle') {
           ctx.beginPath();

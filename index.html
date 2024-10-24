@@ -28,9 +28,8 @@
       border: 2px solid #007bff;
       background-color: white;
       margin-bottom: 20px;
-      max-width: 100%;
-      height: auto;
-      box-sizing: border-box;
+      width: 300px;  /* Fixed width for the canvas */
+      height: 300px; /* Fixed height for the canvas */
     }
 
     h1 {
@@ -96,6 +95,11 @@
         font-size: 0.9rem;
         padding: 8px 16px;
       }
+
+      canvas {
+        width: 250px;
+        height: 250px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -110,6 +114,11 @@
       button {
         font-size: 0.85rem;
         padding: 8px 14px;
+      }
+
+      canvas {
+        width: 200px;
+        height: 200px;
       }
     }
   </style>
@@ -143,11 +152,10 @@
     function generatePattern() {
       const canvas = document.getElementById('patternCanvas');
       const ctx = canvas.getContext('2d');
-      const width = canvas.parentElement.clientWidth * 0.9; // Make canvas responsive
-      canvas.width = width;
-      canvas.height = width; // Keeping canvas square for simplicity
+      const width = canvas.width;
+      const height = canvas.height;
 
-      ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+      ctx.clearRect(0, 0, width, height); // Clear canvas
 
       const shapes = ['circle', 'rectangle', 'triangle'];
 
@@ -156,9 +164,9 @@
         const color = getRandomColor();
         ctx.fillStyle = color;
 
-        const x = getRandomInt(0, canvas.width);
-        const y = getRandomInt(0, canvas.height);
-        const size = getRandomInt(30, canvas.width / 5);
+        const x = getRandomInt(0, width);
+        const y = getRandomInt(0, height);
+        const size = getRandomInt(20, 100); // Smaller size range to fit the canvas
 
         if (shape === 'circle') {
           ctx.beginPath();
@@ -179,9 +187,6 @@
 
     // Generate the first pattern on page load
     window.onload = generatePattern;
-
-    // Re-generate pattern on window resize to keep canvas fluid
-    window.addEventListener('resize', generatePattern);
   </script>
 </body>
 </html>

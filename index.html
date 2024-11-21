@@ -1,148 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coming Soon: Next-Gen Dental Imaging</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #f3f4f6;
-      font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romi Dental Scan - Advanced CBCT Imaging Center</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #60a5fa;
+            --accent: #1e40af;
+            --light: #f0f9ff;
+            --dark: #1e293b;
+        }
 
-    .container {
-      text-align: center;
-      padding: 20px;
-      max-width: 600px;
-      width: 100%;
-      box-sizing: border-box;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-    canvas {
-      border: 2px solid #007bff;
-      background-color: white;
-      margin-bottom: 20px;
-      width: 150px;
-      height: 150px;
-    }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+        }
 
-    h1 {
-      font-size: 2rem;
-      color: #333;
-      margin-bottom: 20px;
-    }
+        .navbar {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-    p {
-      font-size: 1.2rem;
-      color: #666;
-      margin-bottom: 30px;
-      line-height: 1.6;
-    }
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-    }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
 
-    button:hover {
-      background-color: #0056b3;
-    }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
 
-    .contact {
-      margin-top: 20px;
-      font-size: 1rem;
-      color: #007bff;
-    }
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
 
-    .contact a {
-      color: #007bff;
-      text-decoration: none;
-    }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
 
-    .contact a:hover {
-      text-decoration: underline;
-    }
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 6rem 1rem;
+            text-align: center;
+            position: relative;
+        }
 
-    .company-name {
-      font-weight: bold;
-      color: #333;
-    }
-  </style>
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4rem;
+            background: white;
+            clip-path: polygon(0 100%, 100% 100%, 100% 0);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services {
+            padding: 6rem 1rem;
+            background: white;
+        }
+
+        .service-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-section {
+            padding: 6rem 1rem;
+            background: var(--light);
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            background: url('https://www.newtom.it/hubfs/Newtom_theme_2024/Images/slider-image-5.jpg') center/cover;
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .about-text {
+            padding: 2rem;
+        }
+
+        .expertise-list {
+            margin: 2rem 0;
+            list-style: none;
+        }
+
+        .expertise-list li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .expertise-list li:before {
+            content: "✓";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .technology-section {
+            padding: 6rem 1rem;
+            background: white;
+        }
+
+        .tech-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .tech-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .tech-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-section {
+            padding: 6rem 1rem;
+            background: var(--light);
+        }
+
+        .contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .map-container {
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: var(--primary);
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                height: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Revolutionizing Dental Imaging</h1>
-    <p>Stay tuned for cutting-edge CBCT technology and advanced dental imaging solutions.<br> Get ready for a new era in dental care with <span class="company-name">Romi Dental Scan</span>!</p>
-    <canvas id="patternCanvas" width="150" height="150"></canvas>
-    <br>
-    <button onclick="generatePattern()">Generate New Pattern</button>
-    <div class="contact">
-      <p>Questions? Mail us at <a href="mailto:romidentalscan@gmail.com">romidentalscan@gmail.com</a></p>
-    </div>
-  </div>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Romi Dental Scan</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#technology">Technology</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-  <script>
-    function getRandomInt(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Advanced Dental Imaging Solutions</h1>
+            <p>Experience state-of-the-art CBCT technology for precise dental diagnostics</p>
+            <a href="#contact" class="cta-button">Schedule Your Scan</a>
+        </div>
+    </section>
 
-    function getRandomColor() {
-      const letters = '0123456789ABCDEF';
-      let color = '#';
-      for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-      }
-      return color;
-    }
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Comprehensive dental imaging solutions using cutting-edge technology</p>
+        </div>
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-teeth"></i>
+                </div>
+                <h3>CBCT Scanning</h3>
+                <p>High-resolution 3D imaging for detailed dental analysis and treatment planning</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-file-medical"></i>
+                </div>
+                <h3>Expert Reports</h3>
+                <p>Comprehensive diagnostic reports by experienced oral maxillofacial radiologists</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Quick Turnaround</h3>
+                <p>Fast and efficient service with rapid result delivery for urgent cases</p>
+            </div>
+        </div>
+    </section>
 
-    function generatePattern() {
-      const canvas = document.getElementById('patternCanvas');
-      const ctx = canvas.getContext('2d');
-      ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+    <section class="about-section" id="about">
+        <div class="section-title">
+            <h2>About Us</h2>
+            <p>Leading the way in dental imaging excellence</p>
+        </div>
+        <div class="about-content">
+            <div class="about-image"></div>
+            <div class="about-text">
+                <h3>Expert Care & Advanced Technology</h3>
+                <p>At Romi Dental Scan, we're proud to be led by a distinguished Senior Oral Maxillofacial Radiologist with over 15 years of expertise. Our lead radiologist serves as a Professor and Head of Department, bringing unparalleled experience to every diagnosis.</p>
+                <ul class="expertise-list">
+                    <li>Professor and Head of Department</li>
+                    <li>Expert in advanced CBCT interpretation and diagnosis</li>
+                    <li>Comprehensive diagnostic reporting</li>
+                    <li>Dedicated to clinical excellence and patient care</li>
+                </ul>
+                <p>Our commitment to providing precise diagnostics and expert analysis ensures that you receive the highest quality of care for all your dental imaging needs.</p>
+            </div>
+        </div>
+    </section>
 
-      const shapes = ['circle', 'rectangle', 'triangle'];
+    <section class="technology-section" id="technology">
+        <div class="section-title">
+            <h2>Our Technology</h2>
+            <p>State-of-the-art equipment for superior diagnostic quality</p>
+        </div>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <h3>3D Imaging</h3>
+                <p>Advanced CBCT technology for detailed 3D visualization</p>
+            </div>
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-radiation"></i>
+                </div>
+                <h3>Low Radiation</h3>
+                <p>Optimized protocols for minimal radiation exposure</p>
+            </div>
+            <div class="tech-card">
+                <div class="tech-icon">
+                    <i class="fas fa-laptop-medical"></i>
+                </div>
+                <h3>Digital Analysis</h3>
+                <p>Advanced software for precise measurements and analysis</p>
+            </div>
+        </div>
+    </section>
 
-      for (let i = 0; i < 5; i++) { // Generate fewer, smaller shapes
-        const shape = shapes[getRandomInt(0, shapes.length - 1)];
-        const color = getRandomColor();
-        ctx.fillStyle = color;
-
-        const x = getRandomInt(0, canvas.width);
-        const y = getRandomInt(0, canvas.height);
-        const size = getRandomInt(10, 50); // Smaller size range for shapes
-
-        if (shape === 'circle') {
-          ctx.beginPath();
-          ctx.arc(x, y, size / 2, 0, Math.PI * 2);
-          ctx.fill();
-        } else if (shape === 'rectangle') {
-          ctx.fillRect(x, y, size, size);
-        } else if (shape === 'triangle') {
-          ctx.beginPath();
-          ctx.moveTo(x, y);
-          ctx.lineTo(x + size, y);
-          ctx.lineTo(x + size / 2, y - size);
-          ctx.closePath();
-          ctx.fill();
-        }
-      }
-    }
-
-    // Generate the first pattern on page load
-    window.onload = generatePattern;
-  </script>
-</body>
-</html>
+    <section class="contact-section" id="contact">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Get in touch for appointments and inquiries</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <a href="tel:+919289109107">+91 92891 09107</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Address</h3>
+                        <p>B-91, ground floor shop no 1, Main road Kalkaji, Delhi, 110019, India</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <a href="mailto:romidentalscan@gmail.com">romidentalscan@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <h3>Website</h3>
+                        <a href="https://www.romidentalscan.com/">www.romidentalscan.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-file-invoice"></i>
+                    <div>
+                        <h3>GST Number</h3>
+                        <p>07AKIPG4452E1ZE</p>
+                    </div>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.895119931435!2d77.2496672754902!3d28.54287198814667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce373e9ddea3b%3A0x6bd2036ec1c61f86!2sROMI%20DENTAL%20SCAN!5e0!3m2!1sen!2sse!4v1732202306811!5m2!1sen!2sse" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">

@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Allow: /ads.txt
+Allow: /sitemap.xml
+Allow: /privacy-policy.html
+Allow: /terms.html
+
+# Block access to specific directories
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /tmp/
+Disallow: /admin/
+Disallow: /css/
+Disallow: /js/
+Disallow: /*.php$
+Disallow: /*?*
+
+# Crawl-delay for better server performance
+Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://www.romidentalscan.com/sitemap.xml

@@ -256,29 +256,102 @@
         }
 
         .about-section {
-            padding: 6rem 1rem;
-            background: var(--light);
-        }
+        padding: 6rem 1rem;
+        background: var(--light);
+    }
 
+    .about-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+    }
+
+    .about-image {
+        position: relative;
+        height: 100%;
+        min-height: 500px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .doctor-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .about-text {
+        padding: 2rem;
+    }
+
+    .about-text h3 {
+        color: var(--primary);
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .about-text h4 {
+        color: var(--dark);
+        margin: 1.5rem 0 1rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .about-text p {
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: var(--dark);
+    }
+
+    .experience-section {
+        margin: 2rem 0;
+    }
+
+    .expertise-list {
+        margin: 1.5rem 0;
+        list-style: none;
+    }
+
+    .expertise-list li {
+        margin-bottom: 1rem;
+        padding-left: 2rem;
+        position: relative;
+        line-height: 1.6;
+    }
+
+    .expertise-list li:before {
+        content: "✓";
+        color: var(--primary);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+
+    .commitment-section {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 2px solid var(--light);
+    }
+
+    @media (max-width: 768px) {
         .about-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            grid-template-columns: 1fr;
         }
 
         .about-image {
-            background: url('slider-image-5.jpg') center/cover;
-            height: 400px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            min-height: 400px;
         }
 
         .about-text {
-            padding: 2rem;
+            padding: 1rem 0;
         }
+    }
 
         .expertise-list {
             margin: 2rem 0;
@@ -486,47 +559,73 @@
             <p>Comprehensive dental imaging solutions using cutting-edge technology</p>
         </div>
         <div class="service-grid">
+            <!-- Advanced Imaging Services -->
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-cube"></i>
                 </div>
-                <h3>CBCT Scanning</h3>
-                <p>High-resolution 3D imaging for implant planning, bone assessment, and complex diagnoses</p>
+                <h3>3D CBCT Imaging</h3>
+                <p>High-resolution 3D scans of teeth, jaws, face, and sinuses with detailed diagnostic capabilities</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-panorama"></i>
                 </div>
-                <h3>OPG (Panoramic) X-Ray</h3>
-                <p>Complete panoramic view of teeth, jaw, and surrounding structures for comprehensive evaluation</p>
+                <h3>Digital OPG</h3>
+                <p>Advanced panoramic imaging with comprehensive views and expert interpretation</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-joint"></i>
+                </div>
+                <h3>TMJ Analysis</h3>
+                <p>Specialized open and closed TMJ views with 2D/3D reporting for joint assessment</p>
+            </div>
+
+            <!-- Specialized Planning Services -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-teeth"></i>
+                </div>
+                <h3>Comprehensive Implant Planning</h3>
+                <p>Expert planning for all implant types: conventional, basal, zygomatic, and pterygoid</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Endodontic Services</h3>
+                <p>Detailed CBCT analysis, guidance, and planning for endodontic procedures</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-teeth-open"></i>
                 </div>
-                <h3>Lateral Cephalogram</h3>
-                <p>Specialized X-rays for orthodontic assessment and treatment planning</p>
+                <h3>Orthodontic Analysis</h3>
+                <p>Specialized ORTHO reporting and treatment planning services</p>
+            </div>
+
+            <!-- Diagnostic Services -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <h3>Expert Case Analysis</h3>
+                <p>Comprehensive evaluation and reporting by experienced maxillofacial radiologists</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-x-ray"></i>
                 </div>
-                <h3>Digital X-Rays</h3>
-                <p>Intraoral and extraoral digital radiography with minimal radiation exposure</p>
+                <h3>Advanced Diagnostics</h3>
+                <p>Specialized reporting for facial fractures, pathology, and complex cases</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">
-                    <i class="fas fa-file-medical"></i>
+                    <i class="fas fa-drafting-compass"></i>
                 </div>
-                <h3>Expert Reports</h3>
-                <p>Comprehensive diagnostic reports by experienced oral maxillofacial radiologists</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-clock"></i>
-                </div>
-                <h3>Quick Turnaround</h3>
-                <p>Fast and efficient service with rapid result delivery for urgent cases</p>
+                <h3>Surgical Planning</h3>
+                <p>Custom surgical guide planning and advanced case preparation services</p>
             </div>
         </div>
     </section>
@@ -537,18 +636,21 @@
             <p>Leading the way in dental imaging excellence</p>
         </div>
         <div class="about-content">
-            <div class="about-image"></div>
+            <div class="about-image">
+                <!-- Using a placeholder for doctor's image -->
+                <img src="dr-gupta.png" alt="Dr. Ramesh Gupta" class="doctor-image">
+            </div>
             <div class="about-text">
-                <h3>Expert Care & Advanced Technology</h3>
-                <p>At Romi Dental Scan, we're proud to be led by a distinguished Senior Oral Maxillofacial Radiologist with over 15 years of expertise. Our lead radiologist serves as a Professor and Head of Department, bringing unparalleled experience to every diagnosis.</p>
+                <h3>Dr. Ramesh Gupta BDS, MDS, MBA</h3>
+                <p>A distinguished Senior Oral Maxillofacial Radiologist, Dr. Gupta currently serves as Professor and Head of Department at a prestigious dental college in Delhi NCR.</p>
+                
                 <ul class="expertise-list">
-                    <li>Professor and Head of Department in Oral & Maxillofacial Radiology</li>
-                    <li>Expert in CBCT, OPG, and advanced dental imaging interpretation</li>
-                    <li>Specialized in implant planning and orthodontic imaging analysis</li>
-                    <li>Comprehensive diagnostic reporting for all imaging modalities</li>
-                    <li>Dedicated to clinical excellence and patient care</li>
+                    <li>Brings over 15 years of extensive experience in radiology, with specialized focus on advanced 3D imaging spanning more than a decade</li>
+                    <li>Recognized as Pan Asia consultant for CBCT in endodontics, with distinguished expertise in CBCT implant planning and oral facial pathology</li>
+                    <li>Esteemed member of multiple International Radiological Associations</li>
+                    <li>Accomplished academician with numerous scholarly publications</li>
+                    <li>Actively engaged in philanthropic initiatives, contributing to community welfare</li>
                 </ul>
-                <p>Our commitment to providing precise diagnostics and expert analysis ensures that you receive the highest quality of care for all your dental imaging needs.</p>
             </div>
         </div>
     </section>

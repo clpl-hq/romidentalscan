@@ -19,11 +19,14 @@
     
     <style>
         :root {
-            --primary: #FFC107;
-            --dark: #333;
-            --light: #f8f9fa;
-            --text: #666;
-            --border: #e0e0e0;
+            --primary: #2196F3;
+            --primary-dark: #1976D2;
+            --primary-light: #42A5F5;
+            --accent: #FFC107;
+            --dark: #0D47A1;
+            --light: #E3F2FD;
+            --text: #546E7A;
+            --border: #BBDEFB;
         }
         
         * {
@@ -64,7 +67,7 @@
             text-decoration: none;
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--primary);
+            color: #2196F3;
         }
         
         .logo img {
@@ -76,19 +79,19 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--dark);
+            color: #333;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
         
         .back-link:hover {
-            color: var(--primary);
+            color: #2196F3;
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background: linear-gradient(135deg, #0D47A1 0%, #1976D2 100%);
             color: white;
             padding: 4rem 2rem;
             text-align: center;
@@ -200,7 +203,7 @@
         
         /* CTA Section */
         .cta-section {
-            background: var(--dark);
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary-dark) 100%);
             color: white;
             padding: 3rem;
             border-radius: 15px;
@@ -231,29 +234,30 @@
             align-items: center;
             gap: 0.5rem;
             padding: 1rem 2rem;
-            background: var(--primary);
+            background: white;
             color: var(--dark);
             text-decoration: none;
             font-weight: 600;
             border-radius: 50px;
             transition: all 0.3s ease;
             border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
         
         .cta-button:hover {
-            background: #ffab00;
+            background: #f0f0f0;
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 193, 7, 0.3);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
         
         .cta-button.secondary {
-            background: white;
-            color: var(--dark);
-            border: 2px solid var(--primary);
+            background: transparent;
+            color: white;
+            border: 2px solid white;
         }
         
         .cta-button.secondary:hover {
-            background: var(--primary);
+            background: white;
             color: var(--dark);
         }
         
@@ -307,7 +311,7 @@
         
         /* Footer */
         .footer {
-            background-color: #1a1a1a;
+            background: linear-gradient(135deg, #0D47A1 0%, #1976D2 100%);
             color: #fff;
             padding: 2rem 0;
             text-align: center;
@@ -338,7 +342,8 @@
         }
         
         .footer-links a:hover {
-            color: var(--primary);
+            color: #fff;
+            text-decoration: underline;
         }
         
         /* Mobile Responsive */

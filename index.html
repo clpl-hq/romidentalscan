@@ -23,10 +23,10 @@
     </script>
     
     <!-- Primary Meta Tags -->
-    <title>Romi Dental Scan - Advanced CBCT & OPG Dental Imaging Center Delhi | Dr. Ramesh Gupta</title>
-    <meta name="title" content="Romi Dental Scan - Advanced CBCT & OPG Dental Imaging Center Delhi | Dr. Ramesh Gupta">
-    <meta name="description" content="Leading dental imaging center in Kalkaji, Delhi offering CBCT scan, OPG X-ray, Digital imaging & 3D dental scans. Expert radiologist Dr. Ramesh Gupta with 15+ years experience. Same-day reports. Call: +91 92891 09107">
-    <meta name="keywords" content="CBCT scan Delhi, dental imaging center Kalkaji, OPG X-ray Delhi, dental radiology near me, 3D dental scan Delhi, dental X-ray Kalkaji, dental implant planning Delhi, orthodontic imaging, TMJ analysis Delhi, maxillofacial radiology, Romi Dental Scan, Dr Ramesh Gupta radiologist, CBCT near me, dental scan same day report">
+    <title>CBCT Scan & OPG X-Ray Near Me in Kalkaji, Delhi | Same Day Reports | Romi Dental Scan</title>
+    <meta name="title" content="CBCT Scan & OPG X-Ray Near Me in Kalkaji, Delhi | Same Day Reports | Romi Dental Scan">
+    <meta name="description" content="Best dental imaging center in Kalkaji near Nehru Enclave Metro. CBCT scan ₹3000, OPG ₹800, 3D dental scans. Expert Dr. Ramesh Gupta, 15+ years. Same-day reports. Open all 7 days. Book now: 9289109107">
+    <meta name="keywords" content="CBCT scan Delhi, dental imaging center Kalkaji, OPG X-ray Delhi, dental radiology near me, 3D dental scan Delhi, dental X-ray Kalkaji, dental implant planning Delhi, orthodontic imaging, TMJ analysis Delhi, maxillofacial radiology, Romi Dental Scan, Dr Ramesh Gupta radiologist, CBCT near me, dental scan same day report, emergency dental scan Delhi, urgent CBCT scan, same day dental X-ray Delhi, weekend dental imaging Delhi, Sunday dental scan Kalkaji">
 
     <!-- Medical/Dental Specific Meta -->
     <meta name="specialty" content="Dental Radiology, Maxillofacial Imaging">
@@ -206,14 +206,14 @@
             "Saturday",
             "Sunday"
           ],
-          "opens": "09:00",
-          "closes": "19:00"
+          "opens": "10:00",
+          "closes": "22:00"
         },
         {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": "Sunday",
-          "opens": "09:00",
-          "closes": "19:00"
+          "opens": "10:00",
+          "closes": "22:00"
         }
       ],
       "isAcceptingNewPatients": true,
@@ -366,6 +366,92 @@
     }
     </script>
 
+    <!-- Service-specific Schema with Pricing -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "CBCT Dental Scan",
+      "provider": {
+        "@type": "MedicalBusiness",
+        "name": "Romi Dental Scan"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Delhi"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Dental Imaging Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "CBCT Scan - Single Jaw",
+              "description": "3D imaging of upper or lower jaw"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "INR",
+              "minPrice": "1500"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "CBCT Scan - Both Jaws",
+              "description": "Complete 3D imaging of full mouth"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "INR",
+              "minPrice": "2500"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Digital OPG X-Ray",
+              "description": "Panoramic dental X-ray"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "priceCurrency": "INR",
+              "minPrice": "399"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.romidentalscan.com"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.romidentalscan.com/#services"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Contact",
+        "item": "https://www.romidentalscan.com/#contact"
+      }]
+    }
+    </script>
+
     <style>
         html {
             scroll-behavior: smooth;
@@ -393,6 +479,87 @@
 
         .skip-link:focus {
             left: 0;
+        }
+
+        /* Floating Directions Button */
+        .directions-float {
+            position: fixed;
+            width: 45px;
+            height: 45px;
+            bottom: 190px;
+            right: 10px;
+            background-color: #4285F4;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 9997;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse-blue 2s infinite;
+        }
+
+        .directions-float:hover {
+            background-color: #1a73e8;
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .directions-float i {
+            color: white;
+        }
+
+        /* Directions tooltip */
+        .directions-tooltip {
+            position: fixed;
+            bottom: 200px;
+            right: 70px;
+            background: white;
+            color: #333;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            font-size: 14px;
+            font-weight: 500;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 99;
+            white-space: nowrap;
+        }
+
+        .directions-tooltip::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            right: -5px;
+            width: 10px;
+            height: 10px;
+            background: white;
+            transform: rotate(45deg);
+        }
+
+        .directions-float:hover + .directions-tooltip,
+        .directions-tooltip:hover {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Pulse animation for directions button */
+        @keyframes pulse-blue {
+            0% {
+                box-shadow: 0 0 0 0 rgba(66, 133, 244, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(66, 133, 244, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(66, 133, 244, 0);
+            }
         }
 
         /* Floating WhatsApp Button */
@@ -482,7 +649,12 @@
                 display: none !important; /* Hide on mobile since we have it in sticky bar */
             }
             
-            .whatsapp-tooltip {
+            .directions-float {
+                display: none !important; /* Hide on mobile to avoid clutter */
+            }
+            
+            .whatsapp-tooltip,
+            .directions-tooltip {
                 display: none;
             }
         }
@@ -551,6 +723,47 @@
             }
         }
 
+        /* Sunday Hours Banner */
+        .sunday-hours-banner {
+            background: #4CAF50;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-size: 0.9rem;
+            position: sticky;
+            top: 38px; /* Below urgency banner */
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sunday-content {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sunday-hours-banner i {
+            font-size: 1rem;
+        }
+
+        .sunday-hours-banner strong {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .sunday-hours-banner {
+                font-size: 0.8rem;
+                padding: 6px;
+            }
+            
+            .sunday-content {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
         .navbar {
             background: white;
             padding: 1rem;
@@ -562,7 +775,7 @@
         }
         
         .navbar.with-banner {
-            top: 38px; /* Height of urgency banner */
+            top: 76px; /* Height of urgency + sunday banner */
         }
 
         /* Mobile Menu Button */
@@ -699,8 +912,8 @@
         /* Google Ads Optimization - Improving Buttons for Better CTR */
         .cta-button {
             display: inline-block;
-            background: var(--primary);
-            color: white;
+            background: #FFC107;
+            color: #212529;
             padding: 12px 24px;
             border-radius: 50px;
             font-weight: 600;
@@ -713,9 +926,89 @@
         }
         
         .cta-button:hover {
-            background: var(--accent);
+            background: #FFB300;
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Hero enhancements */
+        .hero-features {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .hero-features span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            color: white;
+        }
+
+        .hero-features i {
+            color: white;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .cta-button.secondary {
+            background: #25D366;
+        }
+
+        .cta-button.secondary:hover {
+            background: #128C7E;
+        }
+
+        .cta-button i {
+            margin-right: 0.5rem;
+        }
+
+        .location-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            color: white;
+            backdrop-filter: blur(10px);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .location-highlight:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .location-highlight i {
+            color: white;
+        }
+
+        .cta-button.tertiary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid white;
+        }
+
+        .cta-button.tertiary:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
         }
 
         .hero {
@@ -760,7 +1053,7 @@
             align-items: center;
             gap: 0.75rem;
             background: rgba(255, 255, 255, 0.95);
-            padding: 0.75rem 1.25rem;
+            padding: 0.85rem 1.5rem;
             border-radius: 24px;
             margin-bottom: 1.5rem;
             font-size: 0.95rem;
@@ -768,11 +1061,16 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             color: #1a1a1a;
+            line-height: 1.2;
+            position: relative;
+            top: -5px; /* Move badge up slightly */
         }
 
         .trust-badge i {
             color: #fbbc04;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            display: inline-block;
+            margin-top: -2px; /* Adjust star position */
         }
 
         .section-title {
@@ -1217,6 +1515,14 @@
             color: #FFC107;
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
+            display: block;
+            line-height: 1.2;
+            letter-spacing: 2px;
+        }
+        
+        .rating-score .stars i {
+            vertical-align: middle;
+            margin-top: -3px;
         }
 
         .rating-score p {
@@ -1411,7 +1717,443 @@
             max-width: 1000px;
         }
         
+        /* Mobile adjustments for Elfsight widget */
+        @media (max-width: 768px) {
+            .elfsight-widget-container {
+                margin-top: 0 !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            /* Move the widget up slightly */
+            .elfsight-app-66ec7094-5875-4582-ae6c-d1572b39d987 {
+                margin-top: -10px !important;
+            }
+            
+            /* Adjust google rating summary spacing */
+            .google-rating-summary {
+                margin-bottom: 1.5rem;
+            }
+        }
         
+        /* Testimonials section */
+        .testimonials-section {
+            padding: 4rem 1rem;
+            background: white;
+        }
+
+        /* Carousel Container */
+        .testimonials-carousel-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+
+        .testimonials-carousel {
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 0 0 100%;
+            margin: 0 10px;
+        }
+        
+        @media (min-width: 768px) {
+            .testimonial-card {
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .testimonial-card {
+                flex: 0 0 calc(33.333% - 20px);
+            }
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+        }
+
+        .testimonial-card .stars {
+            color: #FFC107;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            line-height: 1.6;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-author cite {
+            font-style: normal;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .testimonial-date {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        .testimonial-type {
+            color: #666;
+            font-size: 0.85rem;
+            font-style: normal;
+        }
+
+        .review-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .review-cta p {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .review-cta p:first-child {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+        }
+        
+        .review-cta p:last-of-type {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .review-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: white;
+            color: #4285F4;
+            border: 2px solid #4285F4;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .review-button:hover {
+            background: #4285F4;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Carousel Controls */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .carousel-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .carousel-btn.prev {
+            left: 0;
+        }
+
+        .carousel-btn.next {
+            right: 0;
+        }
+
+        /* Carousel Dots */
+        .carousel-dots {
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #ddd;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-carousel-container {
+                padding: 0 40px;
+            }
+            
+            .carousel-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Service areas section */
+        .service-areas {
+            padding: 4rem 1rem;
+            background: var(--light);
+        }
+
+        /* Location Tabs */
+        .location-tabs {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tab-btn {
+            background: white;
+            border: 2px solid #e0e0e0;
+            color: var(--dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tab-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .tab-btn i {
+            font-size: 1.1rem;
+        }
+
+        .tab-content {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .tab-pane {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Landmarks Tab */
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .location-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: 10px;
+        }
+
+        .location-item i {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* Metro Tab */
+        .metro-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .metro-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .metro-item:hover {
+            transform: translateX(5px);
+        }
+
+        .metro-item.primary {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            border: 2px solid var(--primary);
+        }
+
+        .metro-item i {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .metro-item strong {
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .distance {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* Areas Served Tab */
+        .area-group {
+            margin-bottom: 2rem;
+        }
+
+        .area-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .area-group h4 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .area-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .area-tag {
+            background: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            color: var(--dark);
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .area-tag:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* NCR Access Tab */
+        .ncr-access {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .access-card {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .access-card h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .access-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .tab-buttons {
+                gap: 0.5rem;
+            }
+            
+            .tab-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.85rem;
+            }
+            
+            .tab-content {
+                padding: 1.5rem;
+            }
+            
+            .location-grid,
+            .ncr-access {
+                grid-template-columns: 1fr;
+            }
+        }
         
         /* Floating Book Button */
         .floating-book-btn {
@@ -1469,9 +2211,56 @@
         footer {
             background: var(--dark);
             color: white;
-            padding: 3rem 1rem;
+            padding: 3rem 1rem 1rem;
             text-align: center;
         }
+
+        /* Payment Trust Section */
+        .payment-trust-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .payment-methods h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .payment-icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .payment-icons i {
+            font-size: 2rem;
+            color: white;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .payment-icons i:hover {
+            opacity: 1;
+        }
+
+        .insurance-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
 
         .footer-links {
             margin-bottom: 1.5rem;
@@ -1531,23 +2320,44 @@
         .sticky-contact-btn {
             flex: 1;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
-            padding: 0.75rem;
+            gap: 0.25rem;
+            padding: 0.5rem;
             background: var(--primary);
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 500;
-            font-size: 0.9rem;
-            transition: all 0.3s ease, left 0.5s ease, right 0.5s ease;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
         }
 
         .sticky-contact-btn:first-child {
             background: white;
             color: var(--primary);
             border: 2px solid var(--primary);
+        }
+
+        .sticky-contact-btn:nth-child(2) {
+            background: #25D366;
+            color: white;
+            border: none;
+        }
+
+        .sticky-contact-btn:nth-child(3) {
+            background: #4285F4;
+            color: white;
+            border: none;
+        }
+
+        .sticky-contact-btn:active {
+            transform: scale(0.95);
+        }
+
+        .sticky-contact-btn span {
+            font-size: 0.75rem;
         }
 
         .sticky-contact-btn i {
@@ -1590,6 +2400,35 @@
             
             .hero {
                 padding: 4rem 1rem;
+            }
+
+            /* Mobile hero enhancements */
+            .hero-cta-group {
+                flex-direction: column;
+                width: 100%;
+                padding: 0 1rem;
+                gap: 0.75rem;
+            }
+            
+            .cta-button {
+                width: 100%;
+                text-align: center;
+                padding: 1rem;
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .hero-features {
+                flex-direction: column;
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .location-highlight {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
             }
 
             .about-content,
@@ -1677,12 +2516,20 @@
     <a href="#contact" class="urgency-banner" id="urgencyBanner">
         <i class="fas fa-clock"></i> Limited slots available today - Book your appointment now!
     </a>
+    
+    <!-- Sunday Hours Banner -->
+    <div class="sunday-hours-banner">
+        <div class="sunday-content">
+            <i class="fas fa-calendar-check"></i>
+            <span><strong>Open All 7 Days!</strong> Including Sundays • 10 AM - 10 PM • Same Day Reports Available</span>
+        </div>
+    </div>
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-content">
             <a href="#home" class="logo" itemscope itemtype="https://schema.org/Organization" style="text-decoration: none;">
-                <img src="og-image.svg" alt="Romi Dental Scan Logo" style="height: 2.5rem; width: auto; margin-right: 0.5rem;" itemprop="logo" loading="lazy">
+                <img src="og-image.svg" alt="Romi Dental Scan Logo - CBCT and OPG Centre Kalkaji" style="height: 2.5rem; width: auto; margin-right: 0.5rem;" itemprop="logo" loading="eager">
                 <span itemprop="name">Romi Dental Scan</span>
             </a>
             <div class="nav-links" role="menubar" itemscope itemtype="https://schema.org/SiteNavigationElement">
@@ -1718,7 +2565,7 @@
         </div>
         <div class="mobile-contact-info">
             <p><i class="fas fa-phone"></i> <a href="tel:+919289109107" style="color: inherit; text-decoration: none;">+91 92891 09107</a></p>
-            <p><i class="fas fa-clock"></i> Mon-Sun: 9:00 AM - 7:00 PM</p>
+            <p><i class="fas fa-clock"></i> Mon-Sun: 10:00 AM - 10:00 PM</p>
             <a href="https://wa.me/919289109107" class="whatsapp-btn" style="display: block; text-align: center; margin-top: 1rem;">
                 <i class="fab fa-whatsapp"></i> Chat on WhatsApp
             </a>
@@ -1729,9 +2576,31 @@
         <article>
             <section class="hero" id="home" role="banner" aria-label="Hero section">
         <div class="hero-content">
-            <h1>Comprehensive Dental Imaging Solutions</h1>
-            <p>Experience state-of-the-art CBCT, OPG, and Digital X-ray technology for precise dental diagnostics</p>
-            <a href="#contact" class="cta-button">Book Your Scan Today</a>
+            <div class="trust-badge">
+                <i class="fas fa-star"></i>
+                <span>5.0 Rating • 200+ Happy Patients • Trusted Since 2024</span>
+            </div>
+            <h1>CBCT Scan & Digital OPG Centre in Kalkaji, Delhi</h1>
+            <p>Get accurate 3D dental imaging with same-day reports. Low radiation, affordable prices. Open all 7 days including Sunday.</p>
+            <div class="hero-features">
+                <span><i class="fas fa-check-circle"></i> Same Day Reports</span>
+                <span><i class="fas fa-check-circle"></i> Starting from ₹399</span>
+                <span><i class="fas fa-check-circle"></i> Open All 7 Days</span>
+            </div>
+            <a href="https://maps.app.goo.gl/BJY9hghoGQtDKcA39" target="_blank" class="location-highlight">
+                <i class="fas fa-map-marker-alt"></i> Near Nehru Enclave Metro Station, Kalkaji
+            </a>
+            <div class="hero-cta-group">
+                <a href="tel:+919289109107" class="cta-button" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'phone_hero_click', 'value': 1});">
+                    <i class="fas fa-phone"></i> Call Now: 92891 09107
+                </a>
+                <a href="https://wa.me/919289109107" class="cta-button secondary">
+                    <i class="fab fa-whatsapp"></i> Book on WhatsApp
+                </a>
+                <a href="https://maps.app.goo.gl/BJY9hghoGQtDKcA39" target="_blank" class="cta-button tertiary">
+                    <i class="fas fa-directions"></i> Get Directions
+                </a>
+            </div>
         </div>
             </section>
 
@@ -1820,7 +2689,7 @@
         <div class="about-content">
             <div class="about-image">
                 <!-- Using a placeholder for doctor's image -->
-                <img src="dr-gupta.png" alt="Dr. Ramesh Gupta" class="doctor-image" itemprop="image" loading="lazy">
+                <img src="dr-gupta.png" alt="Dr. Ramesh Gupta - Senior Oral Maxillofacial Radiologist with 15+ years experience" class="doctor-image" itemprop="image" loading="lazy">
             </div>
             <div class="about-text" itemscope itemtype="https://schema.org/Person">
                 <h3 itemprop="name">Dr. Ramesh Gupta <span itemprop="honorificSuffix">BDS, MDS, MBA</span></h3>
@@ -1914,6 +2783,303 @@
                 </div>
             </section>
 
+            <!-- Patient Testimonials Section -->
+
+            <!-- Patient Reviews Section -->
+            <section class="testimonials-section" id="testimonials">
+                <div class="section-title">
+                    <h2>What Our Patients Say</h2>
+                    <p>Real experiences from our valued patients across South Delhi</p>
+                </div>
+                <div class="testimonials-carousel-container">
+                    <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="testimonials-carousel">
+                        <div class="testimonials-track">
+                    <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="5">
+                            <meta itemprop="bestRating" content="5">
+                            ★★★★★
+                        </div>
+                        <p itemprop="reviewBody">"An exceptional radiologist! Extremely knowledgeable, thorough, and attentive, making diagnostics accurate and stress-free. Highly recommend for their expertise and patient-focused care!"</p>
+                        <div class="testimonial-author">
+                            <cite itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <span itemprop="name">Akhilesh Arora</span>
+                            </cite>
+                        </div>
+                        <meta itemprop="itemReviewed" content="Romi Dental Scan">
+                    </div>
+                    <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="5">
+                            <meta itemprop="bestRating" content="5">
+                            ★★★★★
+                        </div>
+                        <p itemprop="reviewBody">"Excellent experience with Dr.Romesh and his CBCT centre. Prompt response and excellent images. Dr.Romesh himself being a specialist, guides in diagnostics as well. Definitely recommending this centre."</p>
+                        <div class="testimonial-author">
+                            <cite itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <span itemprop="name">Dr Yulia Lawrence Mathias</span>
+                            </cite>
+                        </div>
+                        <meta itemprop="itemReviewed" content="CBCT Centre">
+                    </div>
+                    <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="5">
+                            <meta itemprop="bestRating" content="5">
+                            ★★★★★
+                        </div>
+                        <p itemprop="reviewBody">"A great radiologist. He made a very professional and attentive impression on me ensuring every procedure is as comfortable and stress-free as possible. As a foreigner, I truly appreciated his clear communication and patient-centered approach, which made me feel at ease throughout the process. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <cite itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <span itemprop="name">Anika Ludwig</span>
+                            </cite>
+                        </div>
+                        <meta itemprop="itemReviewed" content="Romi Dental Scan">
+                    </div>
+                    <!-- Additional Reviews -->
+                    <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="5">
+                            <meta itemprop="bestRating" content="5">
+                            ★★★★★
+                        </div>
+                        <p itemprop="reviewBody">"The officials were welcoming. Displayed excellent professionalism throughout the OPG scanning process. Great experience."</p>
+                        <div class="testimonial-author">
+                            <cite itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <span itemprop="name">Kamal Tripathy</span>
+                            </cite>
+                        </div>
+                        <meta itemprop="itemReviewed" content="OPG Scanning">
+                    </div>
+                    <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="5">
+                            <meta itemprop="bestRating" content="5">
+                            ★★★★★
+                        </div>
+                        <p itemprop="reviewBody">"Very hygienic place and professional staff. Highly recommended for anyone seeking reliable and advanced dental imaging in Delhi."</p>
+                        <div class="testimonial-author">
+                            <cite itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <span itemprop="name">Shalini S Sinnha</span>
+                            </cite>
+                        </div>
+                        <meta itemprop="itemReviewed" content="Romi Dental Scan">
+                    </div>
+                    <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="5">
+                            <meta itemprop="bestRating" content="5">
+                            ★★★★★
+                        </div>
+                        <p itemprop="reviewBody">"Highly recommend! The center is clean, the staff is amazing, and the imaging quality is top-notch!"</p>
+                        <div class="testimonial-author">
+                            <cite itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <span itemprop="name">Dr Arvind Pundir</span>
+                            </cite>
+                        </div>
+                        <meta itemprop="itemReviewed" content="Romi Dental Scan">
+                    </div>
+                    <div class="testimonial-card" itemscope itemtype="https://schema.org/Review">
+                        <div class="stars" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <meta itemprop="ratingValue" content="5">
+                            <meta itemprop="bestRating" content="5">
+                            ★★★★★
+                        </div>
+                        <p itemprop="reviewBody">"Most affordable rates with international machines x ray"</p>
+                        <div class="testimonial-author">
+                            <cite itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <span itemprop="name">Raj Singh</span>
+                            </cite>
+                        </div>
+                        <meta itemprop="itemReviewed" content="X-Ray Services">
+                    </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                    <span class="dot" onclick="goToSlide(3)"></span>
+                </div>
+                <div class="review-cta">
+                    <p><strong>Share Your Experience</strong></p>
+                    <p>Help others find quality dental imaging services by sharing your feedback</p>
+                    <a href="https://maps.app.goo.gl/hvVZqWVpK8EPZyWaA" target="_blank" class="review-button">
+                        <i class="fab fa-google"></i> Write a Review on Google
+                    </a>
+                </div>
+            </section>
+
+            <!-- Location-specific Section -->
+            <section class="service-areas">
+                <div class="section-title">
+                    <h2>Serving South Delhi & Nearby Areas</h2>
+                    <p>Conveniently located in Kalkaji, near Nehru Enclave Metro Station</p>
+                </div>
+                
+                <!-- Location Tabs -->
+                <div class="location-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" onclick="showTab('landmarks')">
+                            <i class="fas fa-map-marker-alt"></i> Landmarks
+                        </button>
+                        <button class="tab-btn" onclick="showTab('metro')">
+                            <i class="fas fa-subway"></i> Metro Access
+                        </button>
+                        <button class="tab-btn" onclick="showTab('areas')">
+                            <i class="fas fa-city"></i> Areas Served
+                        </button>
+                        <button class="tab-btn" onclick="showTab('ncr')">
+                            <i class="fas fa-route"></i> NCR Access
+                        </button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <!-- Landmarks Tab -->
+                        <div id="landmarks-tab" class="tab-pane active">
+                            <div class="location-grid">
+                                <div class="location-item">
+                                    <i class="fas fa-temple-hindu"></i>
+                                    <span>Near Kalkaji Temple</span>
+                                </div>
+                                <div class="location-item">
+                                    <i class="fas fa-store"></i>
+                                    <span>Opposite Haldiram's</span>
+                                </div>
+                                <div class="location-item">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>Near DDA Market Kalkaji</span>
+                                </div>
+                                <div class="location-item">
+                                    <i class="fas fa-building"></i>
+                                    <span>Close to Nehru Place IT Hub</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Metro Tab -->
+                        <div id="metro-tab" class="tab-pane">
+                            <div class="metro-list">
+                                <div class="metro-item primary">
+                                    <i class="fas fa-subway"></i>
+                                    <div>
+                                        <strong>Nehru Enclave Metro Station</strong>
+                                        <span class="distance">5 minute walk - Violet Line</span>
+                                    </div>
+                                </div>
+                                <div class="metro-item">
+                                    <i class="fas fa-subway"></i>
+                                    <div>
+                                        <strong>Kalkaji Mandir Metro</strong>
+                                        <span class="distance">8 minutes - Violet/Magenta Line</span>
+                                    </div>
+                                </div>
+                                <div class="metro-item">
+                                    <i class="fas fa-subway"></i>
+                                    <div>
+                                        <strong>Nehru Place Metro</strong>
+                                        <span class="distance">10 minutes - Violet Line</span>
+                                    </div>
+                                </div>
+                                <div class="metro-item">
+                                    <i class="fas fa-subway"></i>
+                                    <div>
+                                        <strong>Govind Puri Metro</strong>
+                                        <span class="distance">10 minutes - Violet Line</span>
+                                    </div>
+                                </div>
+                                <div class="metro-item">
+                                    <i class="fas fa-subway"></i>
+                                    <div>
+                                        <strong>Jasola Apollo Metro</strong>
+                                        <span class="distance">12 minutes - Violet Line</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Areas Served Tab -->
+                        <div id="areas-tab" class="tab-pane">
+                            <div class="areas-served">
+                                <div class="area-group">
+                                    <h4><i class="fas fa-location-dot"></i> Primary Service Areas</h4>
+                                    <div class="area-tags">
+                                        <span class="area-tag">Kalkaji</span>
+                                        <span class="area-tag">Greater Kailash I & II</span>
+                                        <span class="area-tag">CR Park</span>
+                                        <span class="area-tag">Nehru Place</span>
+                                        <span class="area-tag">East of Kailash</span>
+                                        <span class="area-tag">Lajpat Nagar</span>
+                                        <span class="area-tag">Govindpuri</span>
+                                        <span class="area-tag">Okhla</span>
+                                    </div>
+                                </div>
+                                <div class="area-group">
+                                    <h4><i class="fas fa-map-marked-alt"></i> Extended South Delhi Coverage</h4>
+                                    <div class="area-tags">
+                                        <span class="area-tag">Saket</span>
+                                        <span class="area-tag">Malviya Nagar</span>
+                                        <span class="area-tag">Hauz Khas</span>
+                                        <span class="area-tag">Green Park</span>
+                                        <span class="area-tag">Safdarjung</span>
+                                        <span class="area-tag">AIIMS</span>
+                                        <span class="area-tag">South Extension</span>
+                                        <span class="area-tag">Defence Colony</span>
+                                        <span class="area-tag">Vasant Kunj</span>
+                                        <span class="area-tag">Vasant Vihar</span>
+                                        <span class="area-tag">Chattarpur</span>
+                                        <span class="area-tag">Mehrauli</span>
+                                    </div>
+                                </div>
+                                <div class="area-group">
+                                    <h4><i class="fas fa-hospital"></i> Near Major Hospitals</h4>
+                                    <div class="area-tags">
+                                        <span class="area-tag">Apollo Hospital</span>
+                                        <span class="area-tag">Escorts Heart Institute</span>
+                                        <span class="area-tag">Fortis Hospital</span>
+                                        <span class="area-tag">Max Hospital Saket</span>
+                                        <span class="area-tag">AIIMS Delhi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- NCR Access Tab -->
+                        <div id="ncr-tab" class="tab-pane">
+                            <div class="ncr-access">
+                                <div class="access-card">
+                                    <h4><i class="fas fa-car"></i> From Noida</h4>
+                                    <p>Via DND Flyway or Ashram - 25-30 minutes</p>
+                                </div>
+                                <div class="access-card">
+                                    <h4><i class="fas fa-car"></i> From Faridabad</h4>
+                                    <p>Via Badarpur Border - 20-25 minutes</p>
+                                </div>
+                                <div class="access-card">
+                                    <h4><i class="fas fa-car"></i> From Gurgaon</h4>
+                                    <p>Via Mehrauli-Gurgaon Road - 35-40 minutes</p>
+                                </div>
+                                <div class="access-card">
+                                    <h4><i class="fas fa-car"></i> From Central Delhi</h4>
+                                    <p>Connaught Place (30 min) | Karol Bagh (35 min)</p>
+                                </div>
+                                <div class="access-card">
+                                    <h4><i class="fas fa-car"></i> From West Delhi</h4>
+                                    <p>Dwarka (40 min) | Rajouri Garden (35 min)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="faq-section" id="faq" role="region" aria-labelledby="faq-heading" itemscope itemtype="https://schema.org/FAQPage">
         <header class="section-title">
             <h2 id="faq-heading">Frequently Asked Questions</h2>
@@ -1972,7 +3138,44 @@
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </button>
                     <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Our pricing is competitive and transparent. Costs vary based on the type of scan and area covered. Please call us at <a href="tel:+919289109107">+91 92891 09107</a> for current pricing. We accept multiple payment methods including cash, cards, and UPI.</p>
+                        <p itemprop="text">Our pricing is competitive and transparent. OPG X-ray starts from ₹399 and CBCT scan starts from ₹1500. The exact cost depends on the area to be scanned. Please call us at <a href="tel:+919289109107">+91 92891 09107</a> for detailed pricing. We accept multiple payment methods including cash, cards, and UPI.</p>
+                    </div>
+                </div>
+                <!-- Voice Search Optimized FAQs -->
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question"  aria-expanded="false">
+                        <h3 itemprop="name">Where can I get CBCT scan near me in South Delhi?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Romi Dental Scan in Kalkaji offers advanced CBCT scanning services. We're located at B-91, Ground Floor, Shop No. 1, Main Road Kalkaji, just 5 minutes walk from Nehru Enclave Metro Station. Open all 7 days including Sunday from 10 AM to 10 PM.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question"  aria-expanded="false">
+                        <h3 itemprop="name">Which dental imaging centre is open on Sunday near me?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Romi Dental Scan is open on Sundays from 10 AM to 10 PM. We provide same-day reports even on weekends. Located in Kalkaji near Nehru Enclave Metro, we offer CBCT scans, OPG X-rays, and other dental imaging services 7 days a week.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question"  aria-expanded="false">
+                        <h3 itemprop="name">How much does dental X-ray cost in Delhi?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">At Romi Dental Scan, digital OPG (full mouth X-ray) starts from ₹399, while CBCT 3D scans start from ₹1500. We offer competitive pricing with same-day digital reports. Insurance claims are accepted. Call 9289109107 for exact pricing based on your requirements.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question"  aria-expanded="false">
+                        <h3 itemprop="name">Do you provide emergency dental scans?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes, we offer same-day appointments for urgent and emergency cases. We understand dental emergencies can't wait, so we accommodate urgent CBCT scans and OPG X-rays with immediate reports. Call us at 9289109107 for emergency appointments. We're open 7 days a week from 10 AM to 10 PM.</p>
                     </div>
                 </div>
             </div>
@@ -2015,7 +3218,7 @@
                     <i class="fas fa-envelope"></i>
                     <div>
                         <h3>Email</h3>
-                        <p itemprop="email">romidentalscan[at]gmail.com</p>
+                        <p itemprop="email">romidentalscan@gmail.com</p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -2047,6 +3250,24 @@
     </main>
 
     <footer role="contentinfo" aria-label="Site footer">
+        <!-- Payment Methods and Trust Badges -->
+        <div class="payment-trust-section">
+            <div class="payment-methods">
+                <h4>Payment Methods Accepted</h4>
+                <div class="payment-icons">
+                    <i class="fas fa-money-bill-wave" title="Cash"></i>
+                    <i class="fas fa-credit-card" title="Credit/Debit Cards"></i>
+                    <i class="fab fa-google-pay" title="Google Pay"></i>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzAwQkFGMiIvPgo8cGF0aCBkPSJNMjAgMTBWMzBNMjAgMTBDMTUuNTggMTAgMTIgMTMuNTggMTIgMThDMTIgMjIuNDIgMTUuNTggMjYgMjAgMjZDMjQuNDIgMjYgMjggMjIuNDIgMjggMThDMjggMTMuNTggMjQuNDIgMTAgMjAgMTBaIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+" alt="UPI" title="UPI" style="height: 30px;">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Simple Local SEO Footer -->
+        <div class="local-seo-footer">
+            <p><strong>Romi Dental Scan</strong> - CBCT & OPG Centre serving <strong>Kalkaji, Greater Kailash, CR Park, Nehru Place, East of Kailash, Lajpat Nagar, Saket, Malviya Nagar, Hauz Khas, Green Park, Safdarjung, AIIMS, South Extension, Defence Colony</strong> and nearby areas. Near Nehru Enclave Metro Station.</p>
+        </div>
+        
         <div class="footer-links">
             <a href="privacy-policy.html">Privacy Policy</a>
             <a href="terms.html">Terms of Service</a>
@@ -2146,11 +3367,15 @@
         <div class="sticky-contact-content">
             <a href="tel:+919289109107" class="sticky-contact-btn">
                 <i class="fas fa-phone"></i>
-                <span>Call Now</span>
+                <span>Call</span>
             </a>
             <a href="https://wa.me/919289109107?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment%20for%20dental%20imaging" class="sticky-contact-btn">
                 <i class="fab fa-whatsapp"></i>
                 <span>WhatsApp</span>
+            </a>
+            <a href="https://maps.app.goo.gl/BJY9hghoGQtDKcA39" target="_blank" class="sticky-contact-btn">
+                <i class="fas fa-directions"></i>
+                <span>Directions</span>
             </a>
         </div>
     </div>
@@ -2171,6 +3396,17 @@
         <i class="fab fa-whatsapp"></i>
     </a>
     <div class="whatsapp-tooltip">Chat with us for instant booking!</div>
+    
+    <!-- Floating Directions Button -->
+    <a href="https://maps.app.goo.gl/BJY9hghoGQtDKcA39" 
+       class="directions-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Get directions to CBCT centre"
+       onclick="gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/DIRECTIONS_FLOAT'})">
+        <i class="fas fa-map-marker-alt"></i>
+    </a>
+    <div class="directions-tooltip">Get directions to CBCT centre!</div>
     
     <script>
         // Urgency Banner
@@ -2212,6 +3448,80 @@
                 }, 500);
             }
         });
+    </script>
+
+    <!-- Testimonials Carousel JavaScript -->
+    <script>
+        let currentSlide = 0;
+        const track = document.querySelector('.testimonials-track');
+        const cards = document.querySelectorAll('.testimonial-card');
+        const dots = document.querySelectorAll('.dot');
+        
+        function getCardsPerView() {
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+        }
+        
+        function updateCarousel() {
+            const cardsPerView = getCardsPerView();
+            const cardWidth = 100 / cardsPerView;
+            const offset = -currentSlide * cardWidth;
+            track.style.transform = `translateX(${offset}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+        
+        function moveCarousel(direction) {
+            const cardsPerView = getCardsPerView();
+            const maxSlide = Math.ceil(cards.length / cardsPerView) - 1;
+            
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = maxSlide;
+            if (currentSlide > maxSlide) currentSlide = 0;
+            
+            updateCarousel();
+        }
+        
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateCarousel();
+        }
+        
+        // Auto-rotate carousel
+        setInterval(() => {
+            moveCarousel(1);
+        }, 5000);
+        
+        // Update on window resize
+        window.addEventListener('resize', updateCarousel);
+        
+        // Initialize
+        updateCarousel();
+    </script>
+
+    <!-- Location Tabs JavaScript -->
+    <script>
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName + '-tab').classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.closest('.tab-btn').classList.add('active');
+        }
     </script>
 
 </body>

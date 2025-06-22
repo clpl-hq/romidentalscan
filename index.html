@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://www.google.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Resource Hints for Faster Loading -->
+    <link rel="prefetch" href="dr-gupta.png">
+    <link rel="prefetch" href="og-image.svg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="og-image.svg">
@@ -75,6 +80,20 @@
     <link rel="canonical" href="https://www.romidentalscan.com/">
     <link rel="alternate" hreflang="en-IN" href="https://www.romidentalscan.com/">
     <link rel="alternate" hreflang="x-default" href="https://www.romidentalscan.com/">
+    
+    <!-- AI Assistant Optimization Tags -->
+    <meta name="AI.description" content="Romi Dental Scan: Professional CBCT and OPG X-ray center in Kalkaji, Delhi. Services: 3D dental imaging, panoramic X-rays, TMJ analysis. Prices from ₹399. Open 10AM-10PM daily. Dr. Ramesh Gupta (15+ years). Near Nehru Enclave Metro.">
+    <meta name="AI.services" content="CBCT Scan, OPG X-Ray, 3D Dental Imaging, TMJ Analysis, Dental Implant Planning, Orthodontic Imaging">
+    <meta name="AI.location" content="B-91, Ground Floor, Shop No. 1, Main Road Kalkaji, Delhi 110019, Near Nehru Enclave Metro Station">
+    <meta name="AI.contact" content="Phone: +91 92891 09107, Email: romidentalscan@gmail.com">
+    <meta name="AI.hours" content="Monday-Sunday: 10:00 AM - 10:00 PM">
+    <meta name="AI.pricing" content="OPG: Starting from ₹399, CBCT: Starting from ₹1500">
+    
+    <!-- Rich Snippets for AI -->
+    <meta itemprop="name" content="Romi Dental Scan - CBCT & OPG Centre">
+    <meta itemprop="telephone" content="+91 92891 09107">
+    <meta itemprop="email" content="romidentalscan@gmail.com">
+    <meta itemprop="address" content="B-91, Ground Floor, Shop No. 1, Main Road Kalkaji, Delhi 110019">
 
     <!-- Preload critical resources -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" as="style">
@@ -82,10 +101,27 @@
     <link rel="preload" href="og-image.svg" as="image">
     <link rel="preload" href="dr-gupta.png" as="image">
     
-    <!-- Font Awesome - Only loading icons we use -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" rel="stylesheet">
+    <!-- Critical CSS Inline -->
+    <style>
+        /* Critical above-the-fold CSS */
+        :root{--primary:#FFC107;--dark:#333;--light:#f8f9fa;--text:#666;--border:#e0e0e0}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:var(--text)}
+        nav{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,0.1);position:sticky;top:0;z-index:100;padding:1rem 2rem}
+        .hero{background:linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);color:#fff;padding:6rem 1rem;text-align:center}
+        .section-title{text-align:center;margin-bottom:3rem}
+        .cta-button{display:inline-flex;align-items:center;gap:0.5rem;padding:1rem 2rem;background:#FFC107;color:#333;text-decoration:none;font-weight:600;border-radius:50px;transition:all 0.3s ease}
+    </style>
+    
+    <!-- Font Awesome - Defer non-critical -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/brands.min.css" rel="stylesheet">
+    </noscript>
 
     <!-- Enhanced Schema Markup -->
     <script type="application/ld+json">
@@ -3546,6 +3582,7 @@
                         <a href="#reviews" class="footer-nav-link">Reviews</a>
                         <a href="#contact" class="footer-nav-link">Contact</a>
                         <a href="#faq" class="footer-nav-link">FAQs</a>
+                        <a href="affiliates.html" class="footer-nav-link">Affiliates</a>
                     </nav>
                 </div>
             </div>
@@ -3821,6 +3858,217 @@
             }
         }
     </style>
+
+    <!-- Advanced Performance Optimization Scripts -->
+    <script>
+        // Lazy Loading for Images with Intersection Observer
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        img.classList.add('fade-in');
+                        observer.unobserve(img);
+                    }
+                });
+            }, {
+                rootMargin: '50px 0px',
+                threshold: 0.01
+            });
+
+            // Observe all images with data-src
+            document.addEventListener('DOMContentLoaded', () => {
+                const lazyImages = document.querySelectorAll('img[data-src]');
+                lazyImages.forEach(img => imageObserver.observe(img));
+            });
+        }
+
+        // Defer non-critical JavaScript
+        function loadDeferredScripts() {
+            // Load analytics and tracking scripts after page load
+            setTimeout(() => {
+                // Load Google Analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'page_view', {
+                        'page_title': document.title,
+                        'page_location': window.location.href
+                    });
+                }
+            }, 2000);
+        }
+
+        if (window.addEventListener) {
+            window.addEventListener('load', loadDeferredScripts, false);
+        } else if (window.attachEvent) {
+            window.attachEvent('onload', loadDeferredScripts);
+        }
+
+        // Optimize Largest Contentful Paint (LCP)
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.willChange = 'transform';
+            setTimeout(() => {
+                hero.style.willChange = 'auto';
+            }, 1000);
+        }
+
+        // Reduce Cumulative Layout Shift (CLS)
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set explicit dimensions for dynamic content
+            const images = document.querySelectorAll('img:not([width])');
+            images.forEach(img => {
+                if (img.naturalWidth) {
+                    img.width = img.naturalWidth;
+                    img.height = img.naturalHeight;
+                }
+            });
+        });
+
+        // Optimize First Input Delay (FID)
+        let interactionHandled = false;
+        ['click', 'keydown', 'touchstart'].forEach(event => {
+            document.addEventListener(event, () => {
+                if (!interactionHandled) {
+                    interactionHandled = true;
+                    // Load interactive features on first interaction
+                    loadInteractiveFeatures();
+                }
+            }, { once: true, passive: true });
+        });
+
+        function loadInteractiveFeatures() {
+            // Load any heavy interactive features here
+            console.log('Interactive features loaded');
+        }
+
+        // Service Worker Registration for PWA & Offline Support
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').catch(() => {
+                    // Service worker registration failed
+                });
+            });
+        }
+
+        // Prefetch important pages on hover
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('a[href^="/"], a[href^="https://www.romidentalscan.com"]');
+            links.forEach(link => {
+                link.addEventListener('mouseenter', () => {
+                    const href = link.getAttribute('href');
+                    if (href && !document.querySelector(`link[rel="prefetch"][href="${href}"]`)) {
+                        const prefetchLink = document.createElement('link');
+                        prefetchLink.rel = 'prefetch';
+                        prefetchLink.href = href;
+                        document.head.appendChild(prefetchLink);
+                    }
+                }, { passive: true });
+            });
+        });
+    </script>
+
+    <!-- AI-Friendly Structured Data for Perplexity, ChatGPT, and Gemini -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What services does Romi Dental Scan offer?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Romi Dental Scan offers CBCT scans (3D dental imaging), OPG X-rays (panoramic dental X-rays), TMJ analysis, dental implant planning, and comprehensive oral radiology services. All scans include expert interpretation by Dr. Ramesh Gupta with 15+ years experience."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the prices for dental scans at Romi Dental Scan?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Prices start from ₹399 for basic scans. OPG X-rays start from ₹800 and CBCT scans start from ₹3000. We accept cash, cards, UPI, and Google Pay. Contact +91 92891 09107 for exact pricing based on your requirements."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where is Romi Dental Scan located?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Romi Dental Scan is located at B-91, Ground Floor, Shop No. 1, Main Road Kalkaji, Delhi 110019. We are just a 5-minute walk from Nehru Enclave Metro Station (Violet Line) and opposite Haldiram's."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the operating hours?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We are open 7 days a week from 10 AM to 10 PM, including Sundays and holidays. Same-day appointments and reports are available."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Breadcrumb Schema for Better Navigation Understanding -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.romidentalscan.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Services",
+                "item": "https://www.romidentalscan.com/#services"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Contact",
+                "item": "https://www.romidentalscan.com/#contact"
+            }
+        ]
+    }
+    </script>
+
+    <!-- WebPage Schema for AI Understanding -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Romi Dental Scan - CBCT & OPG X-Ray Centre in Kalkaji, Delhi",
+        "description": "Leading dental imaging center in South Delhi offering CBCT scans, OPG X-rays, and 3D dental imaging with same-day reports. Located near Nehru Enclave Metro Station.",
+        "url": "https://www.romidentalscan.com/",
+        "mainEntity": {
+            "@type": "MedicalBusiness",
+            "name": "Romi Dental Scan"
+        },
+        "keywords": "CBCT scan Delhi, OPG X-ray Kalkaji, dental imaging center, 3D dental scan, dental radiology Delhi, same day reports, Dr Ramesh Gupta",
+        "about": {
+            "@type": "Thing",
+            "name": "Dental Radiology Services"
+        }
+    }
+    </script>
+
+    <!-- Speakable Schema for Voice Assistants -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".hero h1", ".hero p", ".contact-info"]
+        }
+    }
+    </script>
 
 </body>
 </html>

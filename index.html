@@ -1663,6 +1663,14 @@
             gap: 2rem;
             margin-bottom: 2rem;
         }
+        
+        @media (max-width: 480px) {
+            .reviews-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0 1rem;
+            }
+        }
 
         .review-card {
             background: white;
@@ -2031,6 +2039,21 @@
                 width: 35px;
                 height: 35px;
                 font-size: 0.9rem;
+            }
+            
+            .testimonial-card {
+                padding: 1.5rem;
+                margin: 0 5px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .testimonials-carousel-container {
+                padding: 0 30px;
+            }
+            
+            .testimonial-card {
+                padding: 1.2rem;
             }
         }
 
@@ -2616,10 +2639,6 @@
     
     <!-- Sticky Header Container -->
     <div class="sticky-header">
-        <!-- Urgency Banner -->
-        <a href="#contact" class="urgency-banner" id="urgencyBanner">
-            <i class="fas fa-clock"></i> <span >Limited slots available today - Book your appointment now!</span>
-        </a>
         
         <!-- Sunday Hours Banner -->
         <div class="sunday-hours-banner">
@@ -3558,10 +3577,6 @@
             updateCarousel();
         }
         
-        // Auto-rotate carousel
-        setInterval(() => {
-            moveCarousel(1);
-        }, 5000);
         
         // Update on window resize
         window.addEventListener('resize', updateCarousel);
